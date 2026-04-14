@@ -1,0 +1,30 @@
+why staging is imp before commit or before pushing to production code explain clearly and briefly
+git revert -n head used to rvert latest commits?
+if i want get back my reverted ones
+if i use reset and commited id like 7chars what difference it play in reset and revert
+let say i created a banch and in that branch i created a file so the file which created only saves in that branch or also in master branch?
+let say i don't commit after creating that file it will visble in both branches
+why u used -b don't need right
+yup
+i want to reset stagged one can i
+i want all file in one go
+let say in master branch ex xyx.txt file insrted somehting like hi how are and switched the brach to xyx and insrted fine in xyx.txt file thn i switched to to main one and merged it it raises merge conflict right why what is the reason explain with real world examplein simple manner and how can we resolve it.
+when i git commit it open file right thn if i want to insert somehting like what evr may be it after should i save commit or how can i exit
+how to exit frm commit vscode git bash
+ git add remote origin
+git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/user/repo.git'
+what is codespaces in github i can't push thorug my company  to personal is their is issue to push ike i'm unbale to authenticate.
+so i'm using githib codespace do i need to add origin again to push
+how can upload y local machin efolder to github codespace 
+what is difference between git clone and git fork
+git commit -u "ignore"
+error: pathspec 'ignore' did not match any file(s) known to git i created one xyx.txt and created gitigonre in that aaded that file when trying to commit git commit -u "ignore"
+error: pathspec 'ignore' did not match any file(s) known to git
+difference between pull and clone 
+git stash
+difference between git merge and rebase what useful
+git squash wt is main use
+instead of using commit uses squash ?
+for cleaing commit uses squash
