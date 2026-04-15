@@ -7,4 +7,7 @@ jobs:
     steps:
       - name: run first step
         run: echo welcome to githubactions
-        
+      - name: Multiline commands
+        run: |
+          echo "second line"
+          echo "third line"
