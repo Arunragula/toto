@@ -1,0 +1,73 @@
+21. Cloud Service Types
+
+Cloud services are mainly of 3 types:
+
+🖥️ 1. IaaS (Infrastructure as a Service)
+
+👉 You get basic infrastructure like servers, storage, networking
+✔ You manage everything else (OS, apps)
+
+💡 Example:
+
+AWS EC2
+Azure Virtual Machines
+
+👉 Simple meaning: “Rent a computer in the cloud”
+
+🧱 2. PaaS (Platform as a Service)
+
+👉 You get a ready platform to build apps
+✔ Provider manages servers + OS
+✔ You focus only on code
+
+💡 Example:
+
+Google App Engine
+Azure App Service
+
+👉 Simple meaning: “Just deploy your code, no server worries”
+
+📱 3. SaaS (Software as a Service)
+
+👉 Fully ready software used via internet
+✔ No setup needed
+
+💡 Example:
+
+Gmail
+Google Drive
+Netflix
+
+👉 Simple meaning: “Use software directly”
+
+🧠 Quick comparison
+Type	You manage	Provider manages
+IaaS	Apps, OS	Servers, network
+PaaS	Only code	Everything else
+SaaS	Nothing	Everything
+⚡ 22. Serverless
+
+👉 Serverless means you don’t manage servers at all — cloud runs your code automatically.
+
+✔ You just upload functions/code
+✔ It runs only when needed
+✔ You pay only when it runs
+
+💡 Example:
+
+AWS Lambda
+Azure Functions
+🧠 Simple meaning
+
+“No server management, just write code and run”
+
+⚡ Difference from normal cloud
+Traditional	Serverless
+Always running server	Runs only when needed
+Pay always	Pay per use
+You manage servers	Provider manages everything
+🎯 Final summary
+IaaS = rent infrastructure
+PaaS = build apps easily
+SaaS = use ready apps
+Serverless = run code without managing servers
