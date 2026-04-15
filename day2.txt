@@ -23,4 +23,3 @@ staging area and puts them back into the working directory.
 #git revert is used to undo committed changes like using particular id  
 safely by creating a new commit.
 
-dsadiijuftrfhews
