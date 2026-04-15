@@ -1,0 +1,165 @@
+Building github actions
+step1: define name:xyyxy
+
+step2: define how actually runs like whether manula ,triggered by event.
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+It basically says:
+
+“Whenever someone pushes code or opens a PR to main, run these steps on a virtual machine.”
+
+⚙️ 2. Trigger section (on:)
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+What this means:
+✅ push
+
+Runs workflow when code is pushed to main.
+
+✅ pull_request
+
+Runs when someone opens a PR targeting main.
+
+✅ workflow_dispatch
+
+Lets you manually run it from the GitHub Actions tab.
+
+📌 Important part:
+This controls WHEN your CI runs. This is one of the most important sections.
+
+3. Jobs section
+
+jobs:
+  build:
+What this means:
+A job is a group of steps that run together
+Here there is only one job called build
+
+📌 In real projects you may have:
+
+test
+build
+deploy
+
+4. Runner environment
+runs-on: ubuntu-latest
+
+What this means:
+
+Your workflow runs on a fresh Linux machine provided by GitHub.
+
+You can also use:
+
+windows-latest
+macos-latest
+
+📌 Important: This machine is temporary (deleted after job ends).
+
+
+🪜 5. Steps section (MOST IMPORTANT)
+
+Steps run one by one inside the job.
+
+🔹 Step 1: Checkout code
+- uses: actions/checkout@v4
+What it does:
+Downloads your repository into the runner
+Without this, the runner has no access to your code
+
+📌 VERY IMPORTANT — almost every workflow needs this.
+
+🔹 Step 2: Run a command
+- name: Run a one-line script
+  run: echo Hello, world!
+What it does:
+Runs a shell command
+
+Here it just prints:
+
+Hello, world!
+
+📌 This is where you run build commands like:
+
+npm install
+mvn test
+python test.py
+🔹 Step 3: Multi-line script
+- name: Run a multi-line script
+  run: |
+    echo Add other actions to build,
+    echo test, and deploy your project.
+What it does:
+Runs multiple shell commands in sequence
+
+📌 The | means “multi-line shell script”
+
+🧠 6. How the whole flow works
+
+When you push code:
+
+GitHub starts a runner (VM)
+Clones your repo (checkout)
+Runs commands step by step:
+echo Hello world
+echo messages
+Finishes job and deletes VM
+🚀 7. What is IMPORTANT to learn first
+
+If you are starting GitHub Actions, focus on:
+
+⭐ Must know
+on: → when workflow runs
+jobs: → what tasks exist
+steps: → actual execution
+uses: → reuse existing actions
+run: → execute commands
+🛠️ 8. How you should start (practical path)
+Step 1: Modify this basic workflow
+
+Try changing:
+
+echo Hello, world!
+
+to:
+
+node -v
+npm -v
+Step 2: Add a real project build
+
+For example Node.js:
+
+- uses: actions/setup-node@v4
+- run: npm install
+- run: npm test
+Step 3: Add testing stage
+
+Later split jobs:
+
+jobs:
+  test:
+  build:
+  deploy:
+⚠️ 9. Common mistakes beginners make
+
+❌ Forgetting actions/checkout
+❌ Using wrong branch name
+❌ Not installing dependencies
+❌ Assuming runner has your code already
+❌ Mixing build & deploy without structure
+
+📌 Summary
+
+This workflow does 3 main things:
+
+Watches main branch
+Spins up Ubuntu machine
+Runs simple commands
