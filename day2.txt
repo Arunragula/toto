@@ -20,6 +20,6 @@ staging area and puts them back into the working directory.
 
 #git commit -m "message" saves the staged changes permanently in Git history with a message.
 
-#git 
-
+#git revert is used to undo committed changes like using particular id  
+safely by creating a new commit.
 
