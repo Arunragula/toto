@@ -1,0 +1,25 @@
+Hi welcome to day2 arun.
+executing git commands
+
+#touch is used to create file in wpowershell or gitbash or linux command 
+
+#nano used to open that file 
+
+#git init is to intialize the reposirtory like it create a folder name as .git,so the git 
+starting to  track all the changes we going to made.
+
+#git add . moves all changes to the staging area, 
+where they are prepared for commit and can be reviewed before committing.
+
+#git restore --staged . is used to unstage all files, meaning it removes them from the 
+staging area and puts them back into the working directory.
+
+#git reset or git reset --staged . is used remove all files from or unsatge those.
+ The give difference between git restore and git reset is restore only works in before commit,
+ whereas it works in both before commit and after commit.
+
+#git commit -m "message" saves the staged changes permanently in Git history with a message.
+
+#git 
+
+
