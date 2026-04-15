@@ -23,3 +23,226 @@ staging area and puts them back into the working directory.
 #git revert is used to undo committed changes like using particular id  
 safely by creating a new commit.
 
+#git reset head is used to deletes the last commit u did, git reset used delete all the changes u made and files u created as well.
+
+#git log is used to see overal activity.
+
+#git status is to check the files which are stagged,branch position 
+#git log is used to view the commit history (overall activity) of the repository.
+
+✔ Shows:
+
+commits
+authors
+dates
+messages
+✅ git status
+
+Your sentence:
+
+check the files which are stagged, branch position
+
+👉 Correct version:
+
+git status shows the current state of the working directory and staging area, including staged files, unstaged changes, and the current branch.
+
+✔ It shows:
+
+staged files (ready to commit)
+unstaged files
+untracked files
+current branch
+
+#git branch is used the check what branches in the reposirtory
+
+#git branch xyx is used to create new branch 
+
+#git switch and checkout xyyx is used to chnages the branches .
+
+#git merge is used to merge to branches 
+
+✅ 1. git branch
+
+Your sentence:
+
+used to check what branches in the repository
+
+✔ Correct version:
+
+git branch is used to list all branches in the repository.
+
+✅ 2. Create a branch
+
+Your sentence:
+
+git branch xyz is used to create new branch
+
+✔ Correct 👍
+Better full form:
+
+git branch xyz
+
+👉 Creates a new branch, but does NOT switch to it.
+
+✅ 3. Switch branches
+
+Your sentence:
+
+git switch and checkout xyyx is used to change branches
+
+✔ Correct idea, but fix spelling + clarity:
+
+Modern way:
+git switch xyz
+Old way:
+git checkout xyz
+
+👉 Both switch branches, but switch is newer and clearer.
+
+✅ 4. git merge
+
+Your sentence:
+
+used to merge two branches
+
+✔ Correct 👍
+
+Better version:
+
+git merge is used to combine changes from one branch into another.
+
+❓ Can we “demerge” after merge?
+
+👉 ❌ There is no direct “demerge” command
+
+But you have options:
+
+🔹 Option 1: Undo merge (if not pushed)
+git reset --hard HEAD~1
+🔹 Option 2: Safe undo (recommended if already pushed)
+git revert -m 1 <merge-commit-id>
+
+👉 This creates a new commit that reverses the merge
+
+🧠 Simple summary
+Action	Command
+List branches	git branch
+Create branch	git branch xyz
+Switch branch	git switch xyz
+Merge branches	git merge xyz
+Undo merge	git revert or git reset
+
+
+#git .gitignore is used to ignore wtever file we don't want to push to publi or wherever.
+
+# git rebase is used to clean up all the commits like make it cleaner and understanable.
+
+#git stash ?
+✅ .gitignore
+
+Your sentence:
+
+ignore whatever file we don't want to push
+
+✔ Correct version:
+
+.gitignore is used to tell Git which files or folders should not be tracked or committed.
+
+✔ Examples:
+
+node_modules/
+.env
+*.log
+
+👉 Important: it prevents tracking, not just “pushing”.
+
+⚠️ git rebase
+
+Your sentence:
+
+used to clean up all the commits
+
+✔ Partly correct, but better version:
+
+git rebase is used to rewrite commit history, often to make it linear and cleaner.
+
+✔ What it can do:
+
+combine commits (squash)
+reorder commits
+move branch onto another base
+
+⚠️ Warning:
+
+It changes history, so avoid on shared branches.
+🟡 git stash (you asked this)
+
+👉 git stash is used to temporarily save your uncommitted changes without committing them.
+
+💡 Simple meaning:
+
+“Save my current work for later, and clean my working directory”
+
+🔧 Example:
+git stash
+
+✔ Saves changes
+✔ Makes working directory clean
+
+🔄 Bring changes back:
+git stash pop
+📋 View stash list:
+git stash list
+🧠 Easy summary
+Command	Meaning
+.gitignore	Ignore files from tracking
+git rebase	Rewrite/clean commit history
+git stash	Temporarily save work
+🟢 Final answer
+
+✔ .gitignore correct idea (improve wording)
+✔ rebase = clean history (but also rewrites it)
+✔ stash = temporary save for unfinished work
+
+🔍 git diff means
+
+👉 git diff is used to show the differences between files in Git.
+
+It helps you see what changed before committing or after changes.
+
+🧠 Simple meaning
+
+“What did I change in my code?”
+
+📦 What it compares
+1. Working directory vs last commit
+git diff
+
+👉 Shows changes you made but NOT staged yet
+
+2. Staging area vs last commit
+git diff --staged
+
+👉 Shows what is ready to be committed
+
+3. Between commits
+git diff commit1 commit2
+💡 Example
+
+You change a file:
+
+old: Hello World
+new: Hello Git
+
+git diff will show:
+
+- Hello World
++ Hello Git
+🟢 Simple summary
+Command	Shows
+git diff	Unstaged changes
+git diff --staged	Staged changes
+git diff A B	Difference between commits
+🎯 One-line answer
+
+👉 git diff is used to see what has changed in files before committing or comparing versions.
