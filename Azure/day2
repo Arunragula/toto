@@ -1,0 +1,59 @@
+3. High Availability
+
+👉 Cloud services stay running most of the time (24/7) even if something fails.
+✔ If one server goes down, another takes over automatically.
+
+📈 14. Scalability
+
+👉 Ability to increase or decrease resources (CPU, storage, users) when needed.
+✔ Example: Website gets more users → cloud adds more servers.
+
+🔄 15. Elasticity
+
+👉 Automatic scaling based on demand.
+✔ Resources increase during peak time and decrease when not needed.
+
+💡 Difference:
+
+Scalability = planned growth
+Elasticity = automatic adjustment
+🛡️ 16. Reliability
+
+👉 Cloud systems are stable and less likely to fail.
+✔ Data is backed up in multiple locations.
+
+📊 17. Predictability
+
+👉 You can estimate performance, cost, and behavior easily.
+✔ Helps in planning budgets and resources.
+
+🔐 18. Security
+
+👉 Cloud providers protect data using:
+
+encryption
+firewalls
+authentication
+
+✔ But user also must follow security practices.
+
+⚖️ 19. Governance
+
+👉 Rules and policies to control how cloud resources are used.
+✔ Ensures compliance, security, and proper usage.
+
+🛠️ 20. Manageability
+
+👉 Easy to monitor, control, and manage cloud resources.
+✔ Use dashboards to manage servers, apps, storage.
+
+🧠 Super simple summary
+Benefit	Meaning
+High Availability	Always available
+Scalability	Increase/decrease resources
+Elasticity	Auto scaling
+Reliability	Stable system
+Predictability	Easy to estimate
+Security	Protected data
+Governance	Rules & control
+Manageability	Easy to manage

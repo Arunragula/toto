@@ -1,0 +1,136 @@
+🖥️ 28. Azure Compute Services & Virtual Machines (VMs)
+☁️ Azure Compute Services
+
+👉 Services that provide processing power to run applications.
+
+✔ Examples:
+
+Virtual Machines
+App Services
+Containers
+Functions
+🖥️ Virtual Machines (VMs)
+
+👉 A virtual computer in the cloud.
+
+✔ You can:
+
+install OS
+run apps
+control everything
+
+💡 Meaning:
+
+“A computer you rent in Azure”
+
+📈 29. VM Scale Sets (VMSS)
+
+👉 Automatically creates and manages multiple identical VMs.
+
+✔ Used for:
+
+handling high traffic
+auto-scaling apps
+
+💡 Meaning:
+
+“More users → more VMs automatically”
+
+⚖️ 30. Availability Sets & Proximity Groups
+🏗️ Availability Sets
+
+👉 Keeps VMs in different hardware groups to avoid failure.
+
+✔ If one server fails, others still run.
+
+📍 Proximity Groups
+
+👉 Keeps resources physically close in same data center region.
+
+✔ Reduces latency (faster communication)
+
+🚀 31. App Services, Containers, Azure Virtual Desktop
+🌐 App Services
+
+👉 Platform to host web apps easily
+✔ No server management needed
+
+📦 Containers
+
+👉 Lightweight package with app + dependencies
+✔ Runs same everywhere
+
+🖥️ Azure Virtual Desktop
+
+👉 Cloud-based Windows desktop
+✔ Access your PC from anywhere
+
+⚡ 32. Azure Functions
+
+👉 Serverless computing service
+
+✔ Runs code only when triggered
+✔ No server management
+✔ Pay only when used
+
+💡 Meaning:
+
+“Run small pieces of code on demand”
+
+🌐 33. Azure Networking Services
+
+👉 Services that connect and secure cloud resources.
+
+✔ Includes:
+
+Virtual Network (VNet)
+Load Balancer
+Firewall
+VPN
+
+💡 Meaning:
+
+“Networking system for cloud apps”
+
+🔗 34. Network Peering, DNS, VPN Gateway
+🔗 VNet Peering
+
+👉 Connects two virtual networks directly.
+
+🌍 Azure DNS
+
+👉 Converts domain names → IP addresses
+✔ Example: google.com → IP
+
+🔐 VPN Gateway
+
+👉 Secure connection between:
+
+on-premises network ↔ Azure cloud
+🔐 35. Public & Private Endpoints
+🌍 Public Endpoint
+
+👉 Accessible from internet
+
+🔒 Private Endpoint
+
+👉 Accessible only inside private network
+
+💡 Meaning:
+
+Public = open access
+Private = secure internal access
+
+🧠 Final quick summary
+Topic	Meaning
+VM	Cloud computer
+VMSS	Auto-scaling VMs
+Availability Set	Fault protection
+App Service	Host web apps
+Container	Portable app package
+Functions	Serverless code
+Networking	Connect services
+Peering	Connect VNets
+DNS	Name → IP
+VPN	Secure connection
+Endpoints	Public/private access

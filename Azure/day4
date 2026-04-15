@@ -1,0 +1,93 @@
+23. Regions, Region Pairs, Sovereign Regions
+🌐 Regions
+
+👉 A Region is a physical location where Microsoft Azure has data centers.
+✔ Example: India Central, East US
+
+💡 Meaning: “Where your cloud resources are hosted”
+
+🔗 Region Pairs
+
+👉 Each region is paired with another nearby region for backup and disaster recovery.
+✔ If one region fails, data can be recovered from its pair.
+
+💡 Example:
+
+East US ↔ West US
+🏛️ Sovereign Regions
+
+👉 Special isolated regions for government or regulated data.
+✔ Very strict security and compliance.
+
+💡 Example:
+
+US Gov regions
+China regions
+🏢 24. Availability Zones & Data Centers
+🏗️ Data Center
+
+👉 A physical building with servers storing cloud data.
+
+⚡ Availability Zones (AZ)
+
+👉 Separate data centers inside a region.
+✔ Each zone is independent (power, network, cooling)
+
+💡 Meaning:
+
+If one zone fails, others still work
+
+📦 25. Resources and Resource Groups
+🧩 Resources
+
+👉 Individual cloud items like:
+
+Virtual machines
+Databases
+Storage accounts
+📁 Resource Groups
+
+👉 A container to organize resources together.
+
+💡 Example:
+A project may have:
+
+VM
+Storage
+Database
+👉 All stored in one resource group
+💳 26. Subscriptions
+
+👉 A billing and access boundary in Azure.
+
+✔ Defines:
+
+Who can use resources
+How billing is done
+
+💡 Meaning:
+
+“Your cloud account plan”
+
+🏢 27. Management Groups
+
+👉 A higher-level structure to manage multiple subscriptions.
+
+✔ Used by large organizations
+✔ Helps apply policies across all subscriptions
+
+🧠 Simple hierarchy
+Management Groups
+   ↓
+Subscriptions
+   ↓
+Resource Groups
+   ↓
+Resources (VM, DB, etc.)
+🎯 Final summary
+Region = location
+Region Pair = backup region
+Availability Zone = separate data centers
+Resource Group = folder for resources
+Subscription = billing/account unit
+Management Group = manages multiple subscriptions
