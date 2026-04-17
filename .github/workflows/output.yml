@@ -1,0 +1,9 @@
+name: Expressions in GithubActions
+on:
+  workflow_dispatch:
+jobs:
+  Expressions:
+    runs-on: windows-latest
+    steps:
+      - name: Expressions example
+        run: echo '${{toJSON(github)}}'
