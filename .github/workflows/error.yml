@@ -14,5 +14,5 @@ jobs:
       - name: Started pushing
         run: python --version
       - name: Run Python script
-        run: python app.py
+        run: python githubActions/a.py
   
