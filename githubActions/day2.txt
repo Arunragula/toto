@@ -1,2 +1,78 @@
 what is Action ?
 it is a repetative task which runs when a trigger activates.
+
+✅ 1. Your YAML (cleaned up)
+name: Day1
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      # This step checks out your repository code
+      - name: Downloading or checking out code
+        uses: actions/checkout@v4
+
+      # This step prints a message
+      - name: Started pushing
+        run: echo started pushing
+
+      # This step prints multiple lines
+      - name: Completed pushing
+        run: |
+          echo hi how are you
+          echo "I'm fine"
+📝 2. How to write comments in YAML
+
+You use # for comments.
+
+Example:
+
+# This is a comment
+name: Day1
+
+jobs:
+  build:
+    # This runs on a Windows machine
+    runs-on: windows-latest
+
+Comments:
+
+Are ignored during execution
+Are just for humans (documentation)
+📦 3. What does uses: actions/checkout@v4 do?
+
+This uses an official action from GitHub.
+
+👉 It downloads your repository code into the runner so your workflow can use it.
+
+Without it:
+
+Your workflow runs on a machine
+But your code is NOT there
+🤔 4. Your question: “can we use different ones?”
+
+Yes, definitely.
+
+🔹 uses: can run different actions
+
+Example:
+
+uses: actions/setup-node@v4
+
+👉 Sets up Node.js
+
+uses: actions/upload-artifact@v4
+
+👉 Uploads files
+
+So:
+
+uses = reuse ready-made actions from GitHub or others
+
+🧠 5. Key idea (important)
+uses: → use an existing action
+run: → write your own commands
