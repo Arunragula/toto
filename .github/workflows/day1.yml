@@ -1,0 +1,14 @@
+name: Day1
+on:
+  push
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: started pushing
+        uses: actions/checkout@v4
+        run: echo started pushing
+      - name: completed pushing
+        run: |
+          echo hi how are uses
+          echo i;m fine

@@ -1,7 +1,7 @@
 Building github actions
 step1: define name:xyyxy
 
-step2: define how actually runs like whether manula ,triggered by event.
+step2: define how actually runs like whether manual ,triggered by event.
 on:
   push:
     branches: [ "main" ]

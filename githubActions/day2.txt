@@ -1,0 +1,2 @@
+what is Action ?
+it is a repetative task which runs when a trigger activates.
