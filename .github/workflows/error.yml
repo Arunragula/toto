@@ -16,4 +16,16 @@ jobs:
         run: python --version
       - name: Run Python script
         run: python githubActions/a.py
-  
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: getting code downloading
+        uses: actions/checkout@v4
+      - name: python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Started pushing
+        run: python --version
+      - name: deploy
+        run: echo "deploying ...."
