@@ -5,8 +5,10 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: started pushing
+      - name: downloading or checking out code
         uses: actions/checkout@v4
+      - name: started pushing
+        
         run: echo started pushing
       - name: completed pushing
         run: |
