@@ -1,0 +1,16 @@
+name: new pipeline
+on:
+  push : branches:['toto']
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: getting code downloading
+        uses: actions/checkout@v4
+      - name: python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Started pushing
+        run: python --version
+      
