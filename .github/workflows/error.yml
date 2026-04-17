@@ -13,4 +13,6 @@ jobs:
           python-version: '3.11'
       - name: Started pushing
         run: python --version
-      
+      - name: Run Python script
+        run: python app.py
+  
