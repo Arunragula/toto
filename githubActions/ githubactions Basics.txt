@@ -1,0 +1,251 @@
+34. Module Introduction
+
+This just sets the stage.
+
+👉 GitHub Actions = a tool to automate tasks like:
+
+Running tests
+Building apps
+Deploying code
+
+📌 Example:
+“Whenever I push code → run tests automatically”
+
+35. Key Components: Workflows, Jobs, Steps & More
+🔹 Workflow
+
+A YAML file that defines automation.
+
+name: First Workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
+🔹 Job
+
+A group of steps running on a machine.
+
+🔹 Step
+
+A single task (run command or action)
+
+🔹 Runner
+
+The machine executing your job (Linux, Windows, Mac)
+
+36. GitHub Actions: Availability & Pricing
+Free for public repos
+Private repos get limited free minutes
+Paid if usage exceeds limits
+
+📌 Example:
+If your CI runs 1000 mins/month → may incur cost (depending on plan)
+
+37. Creating a First Workflow
+
+Create a file:
+
+.github/workflows/first.yml
+
+Example:
+
+name: My First Workflow
+on: push
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from GitHub Actions!"
+38. Running the First Workflow
+
+Triggered automatically when you push code.
+
+📌 Steps:
+
+Push code to GitHub
+Go to Actions tab
+See workflow running
+39. Running Multi-Line Shell Commands
+
+Instead of one command:
+
+- run: echo "Hello"
+
+Use multiple:
+
+- run: |
+    echo "Hello"
+    echo "This is line 2"
+40. Onwards to a More Realistic Example
+
+Now we do real tasks like installing dependencies.
+
+- run: npm install
+- run: npm test
+
+📌 Example: Node.js project CI pipeline
+
+41. A New Workflow & The "push" Event
+
+Workflows trigger based on events.
+
+on: push
+
+Other examples:
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+📌 Example:
+
+Run tests on PR
+Deploy on push to main
+42. Using Actions In Workflows
+
+Instead of writing everything manually, use pre-built actions.
+
+- uses: actions/checkout@v4
+
+📌 Example:
+This action downloads your repo code into the runner.
+
+43. Checking Out Code In Workflows
+
+Before running code, you must fetch it.
+
+steps:
+  - uses: actions/checkout@v4
+  - run: ls
+
+Without checkout → no project files available
+
+44. Configuring Actions
+
+Pass inputs to actions.
+
+- uses: actions/setup-node@v4
+  with:
+    node-version: '18'
+
+📌 Example:
+Set Node.js version before running code
+
+45. Adding More Workflow Job Steps
+
+Steps run sequentially inside a job.
+
+steps:
+  - uses: actions/checkout@v4
+  - run: npm install
+  - run: npm test
+46. Failing Workflows & Analyzing Workflows
+
+If any step fails → job fails.
+
+- run: exit 1
+
+📌 Debugging:
+
+Check logs in Actions tab
+See which step failed
+47. Adding Multiple Jobs
+
+You can define multiple jobs:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building..."
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing..."
+48. Jobs: In Parallel vs Sequential
+Parallel (default)
+
+Jobs run at same time:
+
+jobs:
+  job1:
+  job2:
+Sequential
+
+Use needs
+
+jobs:
+  build:
+  test:
+    needs: build
+
+📌 Example:
+
+Build → then test
+49. Using Multiple Triggers (Events)
+on:
+  push:
+  pull_request:
+
+📌 Example:
+
+Run workflow on both push and PR
+50. Expressions & Context Objects
+
+Used for dynamic logic.
+
+if: github.ref == 'refs/heads/main'
+Context Example:
+- run: echo ${{ github.actor }}
+
+📌 Prints username who triggered workflow
+
+51. Module Summary
+
+You learned:
+
+Workflows
+Jobs & steps
+Events
+Actions
+Debugging
+Advanced logic
+52. Time to Practice: The Problem
+
+Typical task:
+👉 Build a workflow that:
+
+Runs on push
+Installs dependencies
+Runs tests
+53. Time to Practice: Solution (Example)
+name: Practice Workflow
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - run: npm install
+      - run: npm test
+🚀 Quick Mental Model
+
+Think of it like this:
+
+Workflow = entire automation
+Job = one machine doing tasks
+Step = single command/action
+Event = trigger
+Action = reusable code
