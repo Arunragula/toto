@@ -17,6 +17,7 @@ jobs:
       - name: Run Python script
         run: python githubActions/a.py
   deploy:
+    needs: build
     runs-on: windows-latest
     steps:
       - name: getting code downloading
