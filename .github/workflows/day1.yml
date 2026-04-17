@@ -13,4 +13,4 @@ jobs:
       - name: completed pushing
         run: |
           echo hi how are uses
-          echo i;m fine
+          echo i'm fine
