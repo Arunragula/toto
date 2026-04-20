@@ -1,0 +1,124 @@
+36. Creating a Virtual Machine (VM)
+
+A Virtual Machine in Microsoft Azure is like renting a computer in the cloud.
+
+What you learn
+Choose OS (Windows/Linux)
+Select CPU/RAM size
+Configure networking
+Hands-on
+Go to Azure Portal → “Virtual Machines”
+Click Create → Azure Virtual Machine
+Fill basics:
+Name: myVM
+Image: Ubuntu / Windows Server
+Size: Basic (B1s)
+Set username & password
+Click Review + Create → Create
+37. Connecting to a Virtual Machine
+
+After creating a VM, you access it remotely.
+
+What you learn
+Remote login methods:
+Windows → RDP
+Linux → SSH
+Hands-on
+
+For Linux:
+
+ssh username@public-ip
+For Windows:
+Download RDP file → Open → Enter password
+38. Creating Azure App Services / Web Apps
+
+Azure App Service lets you host websites without managing servers.
+
+What you learn
+Deploy web apps easily
+Supports Node.js, .NET, Python
+Hands-on
+Azure Portal → “App Services”
+Click Create
+Fill:
+App name (must be unique)
+Runtime (Node/Python/.NET)
+Click Create
+39. Azure App Services In Action
+
+This shows how your web app runs live.
+
+What you learn
+Deploy code
+Access via public URL
+Hands-on
+Open your App Service
+Click Browse
+Deploy sample app:
+Use Deployment Center
+Connect GitHub or upload ZIP
+Refresh → see your live website 🌐
+40. Creating Azure Functions
+
+Azure Functions lets you run code without managing servers.
+
+What you learn
+Event-based execution
+Pay only when code runs
+Hands-on
+Azure Portal → “Function App”
+Click Create
+Choose:
+Runtime (Python/Node)
+After creation → “Functions” → “Create”
+Choose template:
+HTTP trigger
+Test in browser using generated URL
+41. Kubernetes and Azure Container Instances
+Kubernetes manages containers
+Azure Container Instances runs containers quickly without cluster setup
+What you learn
+Containers vs orchestration
+Fast deployments
+Hands-on (ACI)
+Azure → “Container Instances”
+Click Create
+Enter:
+Image: nginx
+Deploy → Open public IP → see web server
+42. Azure Container Apps
+
+Azure Container Apps is like Kubernetes but simpler.
+
+What you learn
+Run microservices
+Auto-scaling
+No cluster management
+Hands-on
+Azure → “Container Apps”
+Click Create
+Add container:
+Image: nginx or your app
+Enable Ingress (public access)
+Deploy → Open URL
+43. How to Delete Azure Resources
+
+Important to avoid charges 💸
+
+What you learn
+Clean up resources
+Hands-on
+Go to Resource Groups
+Select your group
+Click Delete Resource Group
+Type name → Confirm
+Quick Practice Flow (Best Way to Learn)
+
+Try this sequence:
+
+Create VM → Connect → install a web server
+Deploy same app using App Service
+Create a Function → trigger it
+Run container via ACI
+Try Container Apps
+Delete everything

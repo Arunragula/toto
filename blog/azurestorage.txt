@@ -1,0 +1,335 @@
+4. Overview of Azure Storage
+
+Azure Storage is Microsoft’s cloud-based storage system designed to store massive amounts of data securely, cheaply, and with high availability. Instead of saving files on your local computer or physical servers, Azure Storage lets you store them in the cloud and access them from anywhere.
+
+Azure Storage supports multiple data types through different services:
+
+Blob Storage → for unstructured data (images, videos, backups)
+File Storage → shared file systems
+Queue Storage → messaging between applications
+Table Storage → NoSQL structured data
+
+One of its biggest advantages is scalability. You can start small and grow to store petabytes of data without worrying about hardware. It also offers redundancy options (like LRS, GRS), meaning your data is automatically copied across locations to prevent loss.
+
+Security is another key feature. Azure Storage supports encryption (data at rest and in transit), access keys, and role-based access control.
+
+In real-world use:
+
+Websites store images in Blob Storage
+Companies store backups and logs
+Applications store user-generated content
+
+From a hands-on perspective, you first create a Storage Account, which acts as the main container. Inside it, you create services like containers or file shares.
+
+In short, Azure Storage is the foundation of data handling in Azure, just like a hard drive—but infinitely scalable, highly secure, and globally accessible.
+
+45. Container (Blob) Storage
+
+Azure Blob Storage is used to store unstructured data—data that doesn’t fit neatly into tables, like images, videos, PDFs, backups, and logs.
+
+Blob Storage organizes data in a hierarchy:
+
+Storage Account
+→ Container
+→ Blob (actual file)
+
+A container is similar to a folder. You can create multiple containers inside a storage account to organize your data logically (e.g., “images”, “videos”, “documents”).
+
+There are three types of blobs:
+
+Block blobs → most common (files, media)
+Append blobs → logs (data added continuously)
+Page blobs → used for virtual machine disks
+
+Blob Storage also supports access tiers:
+
+Hot → frequent access
+Cool → less frequent
+Archive → long-term storage (very cheap)
+
+From a practical perspective:
+
+Create a Storage Account
+Create a Container
+Upload files (blobs)
+Access via URL or API
+
+You can also control access:
+
+Private (default)
+Public (for websites/images)
+
+Example use case:
+
+A website stores all images in Blob Storage and loads them via URL.
+
+Blob Storage is highly durable and scalable, making it ideal for data lakes, backups, and media streaming.
+
+46. Create an Unmanaged Storage Account
+
+Azure Storage Account is the top-level resource where all storage services live. “Unmanaged” storage accounts were traditionally used to store virtual machine disks manually.
+
+In older Azure setups, when creating VMs, you had to:
+
+Create a storage account
+Store VM disks (VHD files) inside it
+
+This approach required manual management, including:
+
+Naming conventions
+Performance handling
+Scaling storage
+
+Now, Azure recommends managed disks, which automatically handle storage behind the scenes. However, understanding unmanaged storage helps in legacy systems.
+
+Hands-on steps:
+
+Go to Azure Portal
+Search “Storage Accounts”
+Click “Create”
+Enter:
+Name (globally unique)
+Region
+Performance (Standard/Premium)
+Click “Create”
+
+Once created, you can:
+
+Store blobs
+Upload files
+Manage access
+
+Key concepts:
+
+Storage accounts have access keys
+They define pricing and performance
+They act as the root container
+
+Even though unmanaged storage is outdated, it’s still useful for understanding how Azure evolved and how storage works at a lower level.
+
+47. Upload Files to a Storage Account
+
+Uploading files to Azure means storing data as blobs inside a container in Azure Blob Storage.
+
+There are multiple ways to upload files:
+
+1. Azure Portal (GUI)
+
+Go to Storage Account
+Click “Containers”
+Create/select a container
+Click “Upload”
+Choose file → Upload
+
+2. Command Line / Tools
+
+Azure CLI
+PowerShell
+AzCopy
+
+3. Programmatically
+
+Using SDKs (Python, Java, Node.js)
+
+Each uploaded file becomes a blob with a unique URL:
+
+https://account.blob.core.windows.net/container/file.jpg
+
+You can control access:
+
+Private (secure)
+Public (accessible via URL)
+
+Common real-world uses:
+
+Uploading website images
+Storing backups
+Saving logs or documents
+
+Important features:
+
+Versioning → track changes
+Metadata → attach info to files
+Access control → secure sharing
+
+Hands-on tip:
+Try uploading an image and accessing it via browser using its URL.
+
+Uploading is simple but forms the base for cloud applications, storage systems, and data pipelines.
+
+48. Azure Storage Explorer & Storage Browser
+
+Azure Storage Explorer is a powerful GUI application that allows you to manage Azure Storage easily.
+
+Instead of using the portal or command line, you get a file explorer-like interface where you can:
+
+Upload/download files
+Create containers
+Manage blobs
+View metadata
+
+Steps to use:
+
+Download and install Storage Explorer
+Sign in with Azure account
+Select storage account
+Browse containers and files
+
+It supports:
+
+Blob storage
+File shares
+Queues and tables
+
+Storage Browser, on the other hand, is a lightweight version inside the Azure Portal. It allows quick file operations without installing software.
+
+Why these tools matter:
+
+Easier than command line
+Faster for bulk operations
+Visual management
+
+Real-world use:
+
+Developers upload test files
+Admins manage backups
+Engineers debug storage issues
+
+These tools improve productivity and simplify cloud storage management.
+
+49. AZCopy
+
+AzCopy is a fast and efficient command-line tool designed for transferring large amounts of data to and from Azure Storage.
+
+It is optimized for performance and can handle:
+
+Thousands of files
+Large datasets (GBs to TBs)
+Parallel transfers
+
+Basic command example:
+
+azcopy copy "local-file-path" "destination-url"
+
+Key features:
+
+High-speed data transfer
+Resume interrupted transfers
+Supports Blob and File storage
+Secure using SAS tokens
+
+Common use cases:
+
+Migrating data to Azure
+Backing up files
+Syncing directories
+
+Example:
+
+azcopy sync "local-folder" "blob-container-url"
+
+Why use AZCopy instead of portal?
+
+Much faster
+Handles bulk operations
+Automatable via scripts
+
+AZCopy is widely used in real-world cloud projects where large-scale data movement is required.
+
+50. Azure Files and Azure File Sync
+
+Azure Files provides fully managed file shares in the cloud using SMB protocol.
+
+This means:
+
+You can mount it like a network drive
+Multiple users/apps can access it
+
+Example:
+
+Company shares files across teams
+
+Azure File Sync extends this by syncing on-premise servers with Azure.
+
+How it works:
+
+Frequently used files stay local
+Older files move to cloud
+Seamless sync between both
+
+Benefits:
+
+Hybrid cloud storage
+Reduced local storage usage
+Backup and disaster recovery
+
+Use cases:
+
+Shared drives
+Lift-and-shift migrations
+Hybrid environments
+
+Hands-on idea:
+
+Create file share
+Mount it on your system
+Access like a normal folder
+51. Azure Migrate
+
+Azure Migrate is a tool that helps move your existing infrastructure (servers, apps, databases) to Azure.
+
+It works in phases:
+
+Assessment
+Analyze current systems
+Check compatibility
+Estimate cost
+Migration
+Move workloads to Azure
+Minimal downtime
+
+It supports:
+
+Virtual machines
+Databases
+Web apps
+
+Why it’s important:
+
+Simplifies cloud adoption
+Reduces risk
+Provides detailed insights
+
+Example:
+A company moves its data center to Azure using Azure Migrate.
+
+52. Azure Data Box
+
+Azure Data Box is used when transferring large data over the internet is too slow or expensive.
+
+It is a physical device provided by Microsoft.
+
+Process:
+
+Order Data Box
+Microsoft ships device
+Copy data locally
+Send it back
+Data uploaded to Azure
+
+Supports:
+
+TBs to PBs of data
+
+Use cases:
+
+Data center migration
+Backup transfer
+Large dataset uploads
+
+Why needed:
+
+Internet limitations
+Faster and secure
+
+It’s especially useful for enterprises handling massive data volumes.
