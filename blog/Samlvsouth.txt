@@ -1,0 +1,47 @@
+Yes—Microsoft Entra ID supports both SAML and OAuth, but they are used for different purposes.
+
+🔐 Does Entra ID use SAML or OAuth?
+👉 Short answer:
+
+✔️ Yes, it supports both SAML and OAuth (and OpenID Connect)
+❗ But they are used in different scenarios.
+
+🧩 1️⃣ SAML (Security Assertion Markup Language)
+SAML
+👉 Used for:
+Enterprise Single Sign-On (SSO)
+Older or traditional enterprise applications
+🧠 How it works:
+User logs in via Entra ID
+Entra ID sends a SAML token (XML assertion) to the app
+App trusts it and logs user in
+📌 Example:
+Salesforce (classic enterprise SSO)
+SAP applications
+🔑 2️⃣ OAuth
+OAuth
+👉 Used for:
+Authorization (not authentication alone)
+Granting apps access to resources
+🧠 How it works:
+App gets a token instead of password
+Token allows limited access to resources
+Often used with OpenID Connect for login
+📌 Example:
+“Login with Microsoft”
+Apps accessing Microsoft Graph API
+🔄 Key difference
+Feature	SAML	OAuth
+Purpose	Authentication (SSO)	Authorization
+Token type	XML assertion	JSON token (JWT)
+Usage	Enterprise apps	Modern web/mobile apps
+Age	Older	Modern standard
+🧠 Easy way to remember
+🔐 SAML = Login to corporate apps (SSO)
+🔑 OAuth = Give apps permission to access data
+🎯 Interview-ready answer
+
+👉
+“Microsoft Entra ID supports both SAML and OAuth. SAML is mainly used for enterprise 
+Single Sign-On with older applications using XML-based assertions, while OAuth is used 
+for modern authorization scenarios where applications access APIs using secure tokens.”

@@ -1,0 +1,63 @@
+🔐 What Microsoft Entra ID actually is
+
+Microsoft Entra ID is a cloud-based identity and access management service.
+
+🧠 Your idea (refined)
+
+You said:
+
+“used for identifying the user and uses only one credential rather than many IDs for each app”
+
+✔️ Correct concept:
+
+Yes—Entra ID provides Single Sign-On (SSO).
+
+That means:
+
+You sign in once using one account
+Then you can access multiple apps without logging in again
+🔑 More precise explanation
+👉 What Entra ID does:
+👤 Identifies users (who you are)
+🔐 Authenticates users (verifies login)
+🧾 Authorizes access (what you can use)
+🔁 Provides Single Sign-On across apps
+📌 Example
+
+Without Entra ID:
+
+Separate username/password for Gmail, Teams, Salesforce, etc.
+
+With Entra ID:
+
+One login (Microsoft account)
+Access:
+Microsoft Teams
+Outlook
+Azure Portal
+Third-party apps
+⚠️ Important correction
+
+It is NOT just:
+
+“a single credential system”
+
+It is actually:
+✔ Identity provider
+✔ Authentication system
+✔ Access control system
+✔ Security enforcement platform
+
+🧠 Simple way to remember
+
+👉 Entra ID is like a central identity authority
+
+One ID = many apps
+One login = many services
+🎯 Interview-ready answer
+
+👉
+“Microsoft Entra ID is a cloud-based identity and access management service 
+that centralizes user authentication and authorization. It enables Single Sign-On, 
+allowing users to access multiple applications with one set of credentials instead of 
+maintaining separate logins for each application.”

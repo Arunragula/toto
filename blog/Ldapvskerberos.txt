@@ -1,0 +1,61 @@
+these two are core to identity systems, especially when working with Microsoft Entra ID
+ and on-prem Active Directory.
+
+🔐 LDAP vs Kerberos
+1️⃣ LDAP
+👉 What it is:
+
+A protocol used to query and manage directory data
+
+🧠 What it does:
+Searches for users, groups, and objects
+Reads and updates directory information
+📌 Example:
+
+When an app asks:
+
+“Does this user exist? What is their role?”
+
+👉 That’s LDAP in action
+
+2️⃣ Kerberos
+👉 What it is:
+
+A protocol used for secure authentication
+
+🧠 What it does:
+Verifies user identity
+Uses tickets instead of sending passwords
+Enables Single Sign-On (SSO)
+📌 Example:
+
+When you log into a domain computer once and access multiple services without re-entering 
+your password
+
+👉 That’s Kerberos
+
+🔄 Key difference
+Feature	LDAP	Kerberos
+Purpose	Directory access	Authentication
+Role	“Find user info”	“Verify user identity”
+Works with	Directory (AD)	Authentication system
+Security	Can use SSL (LDAPS)	Strong (ticket-based)
+🧩 How they work together
+
+In Active Directory environments:
+
+👤 User logs in → Kerberos authenticates
+📂 System queries → LDAP retrieves user details
+
+👉 So:
+
+Kerberos = login verification
+LDAP = data lookup
+🧠 Simple analogy
+Kerberos = 🔐 Security guard checking your ID
+LDAP = 📘 Directory book showing your details
+🎯 Interview-ready answer
+
+👉
+“Kerberos is used for secure authentication using tickets, while LDAP is used to query and manage 
+directory services like Active Directory. Kerberos verifies identity, and LDAP retrieves user information.”
