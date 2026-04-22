@@ -1,0 +1,157 @@
+Azure Cloud Shell
+
+Azure Cloud Shell is a browser-based command-line tool in Microsoft Azure.
+
+No setup needed—runs in your browser
+Supports:
+Bash (Linux)
+PowerShell (Windows)
+Comes pre-installed with Azure tools
+
+👉 Use it to quickly manage resources without installing anything.
+
+Create Resources Using Command Line (Concept)
+
+Instead of using the portal (GUI), you can create resources using commands:
+
+Using Azure CLI
+Or PowerShell
+
+Example actions:
+
+Create a virtual machine
+Create a storage account
+Deploy apps
+
+👉 Faster, scriptable, and useful for automation.
+
+Azure Arc
+
+Azure Arc lets you manage resources outside Azure.
+
+Manage:
+On-premises servers
+Other cloud providers (AWS, GCP)
+
+👉 It brings everything under one control plane in Azure.
+
+Infrastructure as Code (IaC)
+
+IaC means defining infrastructure using code instead of manual setup.
+
+You write files that describe:
+Servers
+Networks
+Databases
+
+👉 Benefits:
+
+Automation
+Consistency
+Version control
+ARM Templates
+
+ARM Templates are JSON files used for IaC in Azure.
+
+Define resources and configurations
+Deploy everything in one go
+Repeatable and reliable
+
+👉 Example: A single template can create a VM + network + storage.
+
+Generate ARM Templates in Azure Portal (Concept)
+
+In the Azure portal:
+
+Create resources manually
+Azure can export a template of that setup
+You reuse that template later
+
+👉 Useful for:
+
+Learning IaC
+Recreating environments quickly
+Simple way to remember
+Cloud Shell → run commands
+CLI/PowerShell → create resources
+Azure Arc → manage hybrid environments
+IaC → infrastructure using codeAzure Cloud Shell
+
+Azure Cloud Shell is a browser-based command-line tool in Microsoft Azure.
+
+No setup needed—runs in your browser
+Supports:
+Bash (Linux)
+PowerShell (Windows)
+Comes pre-installed with Azure tools
+
+👉 Use it to quickly manage resources without installing anything.
+
+Create Resources Using Command Line (Concept)
+
+Instead of using the portal (GUI), you can create resources using commands:
+
+Using Azure CLI
+Or PowerShell
+
+Example actions:
+
+Create a virtual machine
+Create a storage account
+Deploy apps
+
+👉 Faster, scriptable, and useful for automation.
+
+Azure Arc
+
+Azure Arc lets you manage resources outside Azure.
+
+Manage:
+On-premises servers
+Other cloud providers (AWS, GCP)
+
+👉 It brings everything under one control plane in Azure.
+
+Infrastructure as Code (IaC)
+
+IaC means defining infrastructure using code instead of manual setup.
+
+You write files that describe:
+Servers
+Networks
+Databases
+
+👉 Benefits:
+
+Automation
+Consistency
+Version control
+ARM Templates
+
+ARM Templates are JSON files used for IaC in Azure.
+
+Define resources and configurations
+Deploy everything in one go
+Repeatable and reliable
+
+👉 Example: A single template can create a VM + network + storage.
+
+Generate ARM Templates in Azure Portal (Concept)
+
+In the Azure portal:
+
+Create resources manually
+Azure can export a template of that setup
+You reuse that template later
+
+👉 Useful for:
+
+Learning IaC
+Recreating environments quickly
+Simple way to remember
+Cloud Shell → run commands
+CLI/PowerShell → create resources
+Azure Arc → manage hybrid environments
+IaC → infrastructure using code
+ARM Templates → Azure’s IaC format
+ARM Templates → Azure’s IaC format

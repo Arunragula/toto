@@ -1,0 +1,61 @@
+Azure Governance and Compliance
+
+This is about controlling, managing, and securing your resources in Microsoft Azure.
+
+Ensures resources follow rules, standards, and regulations
+Helps with cost control, security, and consistency
+Tools include policies, locks, and compliance frameworks
+
+👉 Think of it as the “rulebook” for everything in your cloud environment.
+
+Azure Policy
+
+Azure Policy lets you create and enforce rules on your resources.
+
+Example rules:
+Only allow certain regions
+Enforce specific VM sizes
+Require tags (like “department” or “owner”)
+
+👉 It can:
+
+Deny non-compliant resources
+Audit them
+Automatically fix issues (in some cases)
+DEMO: Azure Policy (concept)
+
+In practice, using Azure Policy involves:
+
+Define a policy (e.g., “only allow East US region”)
+Assign it to a subscription/resource group
+Azure checks resources continuously
+Non-compliant resources are flagged or blocked
+
+👉 So instead of manually checking, Azure enforces rules automatically.
+
+Resource Locks
+
+Resource locks prevent accidental changes or deletions.
+
+There are 2 types:
+
+ReadOnly → users can view but not modify
+Delete → prevents deletion but allows edits
+
+👉 Example: Lock a production database so no one deletes it by mistake.
+
+Microsoft Purview
+
+Microsoft Purview is a data governance and compliance tool.
+
+Helps you discover, classify, and manage data
+Tracks where your data is and how it's used
+Supports compliance with regulations (like GDPR)
+
+Key features:
+
+Data catalog (know what data you have)
+Data lineage (track data flow)
+Sensitive data classification
+
+👉 Think of it as a data map + compliance monitor for your organization.
