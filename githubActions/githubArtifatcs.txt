@@ -1,0 +1,91 @@
+Artifacts in GitHub Actions are basically files your workflow saves after a job runs so you
+ can use them later.
+
+Think of them as a way to preserve outputs from a workflow.
+
+What artifacts are used for
+1) Saving build outputs
+
+After building your project, you can store:
+
+compiled binaries
+.jar, .exe, .apk, .zip files
+
+Example:
+
+Build app → upload artifact → download later without rebuilding
+2) Sharing files between jobs
+
+Jobs in GitHub Actions run separately. Artifacts let you pass data:
+
+Job 1 → builds code
+Job 2 → downloads artifact and deploys
+
+Without artifacts, jobs don’t share files easily.
+
+3) Debugging failures
+
+You can upload:
+
+logs
+test reports
+screenshots (for UI tests)
+
+So when something fails, you can download and inspect.
+
+4) Storing test results
+
+Useful for CI pipelines:
+
+unit test reports
+coverage reports
+5) Temporary storage (not permanent)
+
+Artifacts are:
+
+stored for a limited time (default ~90 days, configurable)
+not meant for long-term storage like releases
+Simple example
+name: Example Artifact
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create file
+        run: echo "Hello World" > output.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-file
+          path: output.txt
+
+  download:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: my-file
+
+      - run: cat output.txt
+Important clarification
+
+Artifacts are not for security.
+
+They:
+
+don’t hide your code
+don’t encrypt things by default
+are just storage inside the workflow
+Quick analogy
+
+Artifacts are like:
+
+“Save this file after the process finishes so I can use or download it later.”
