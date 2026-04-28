@@ -7,12 +7,12 @@ jobs:
       - name: downloading code
         uses: actions/checkout@v4
       - name: file
-        run: echo "hello world" > githubActions/githubArtifacts.txt
+        run: echo "hello world" > output.txt
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-file
-          path: githubActions/githubArtifacts.txt
+          path: artifact/output.txt
    
   download:
     runs-on: windows-latest
@@ -24,4 +24,4 @@ jobs:
           name: my-file
 
       - name: read file
-        run: Get-Content githubActions/githubArtifacts.txt
+        run: Get-Content artifact/output.txt
