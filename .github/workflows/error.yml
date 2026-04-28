@@ -1,7 +1,10 @@
 name: new pipeline
 on:
   push: 
-    branches: ["main","jolo"]
+    branches:
+      - main
+      - jolo
+  workflow_dispatch:
 jobs:
   build:
     runs-on: windows-latest
