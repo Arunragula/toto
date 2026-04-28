@@ -24,4 +24,4 @@ jobs:
           name: my-file
 
       - name: read file
-        run: Get-Content my-file/githubArtifacts.txt
+        run: Get-Content githubActions/githubArtifacts.txt
