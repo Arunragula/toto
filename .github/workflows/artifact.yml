@@ -1,6 +1,5 @@
 name: Artifcat
-on:
-  push
+on: push
 jobs:
   build:
     runs-on: windows-latest
@@ -13,16 +12,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-file
-          path: output.txt
+          path: githubArtifacts.txt
    
   download:
-  runs-on: windows-latest
-  needs: build
-  steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: my-file
+    runs-on: windows-latest
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: my-file
 
-    - run: cat output.txt
+      - run: cat githubArtifacts.txt
       
