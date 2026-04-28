@@ -16,7 +16,7 @@ jobs:
           path: output.txt
    
   download:
-  runs-on: ubuntu-latest
+  runs-on: windows-latest
   needs: build
   steps:
     - name: Download artifact
