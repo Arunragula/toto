@@ -7,7 +7,7 @@ jobs:
       - name: downloading code
         uses: actions/checkout@v4
       - name: file
-        run: echo "hello world" > output.txt
+        run: echo "hello world" > artifact/output.txt
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
